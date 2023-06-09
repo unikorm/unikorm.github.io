@@ -1,1 +1,52 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forFun</title>
+
+    <style>
+        #myButton {
+            position: absolute;
+            top: 20px;
+            left: 160px;
+        }
+    </style>
+
+</head>
+<body>
+    <p>I love my princess</p>
+    <button id="myButton" onclick="moveButton()">Yaiiiii</button>
+
+    <script>
+        var button = document.getElementById("myButton");
+        var isMoved = false;
+
+        function getRandomNumber(min, max) {
+            return Math.floor( Math.random() * (max - min + 1)) + min;
+        }
+
+        //var randomNumber = getRandomNumber(40, 700);
+
+        function moveButton() {
+            if (isMoved) {              
+                var randomX = getRandomNumber(40, 700);
+                var randomY = getRandomNumber(40, 700);
+                button.style.top = randomX + "px";
+                button.style.left = randomY + "px";
+                isMoved = false;
+                //console.log(randomX, randomY);
+            } else {
+                var randomX = getRandomNumber(40, 700);
+                var randomY = getRandomNumber(40, 700);
+                button.style.top = randomX + "px";
+                button.style.left = randomY + "px";
+                isMoved = true;
+                //console.log(randomX, randomY);
+            }
+        }
+    </script>
+
+</body>
+</html>

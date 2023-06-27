@@ -20,32 +20,32 @@
     <button id="myButton" onclick="moveButton()">Yaiiiii</button>
 
     <script>
-        var button = document.getElementById("myButton");
-        var isMoved = false;
+        let button = document.getElementById("myButton");
+        let isMoved = false;
 
         function getRandomNumber(min, max) {
-            return Math.floor( Math.random() * (max - min + 1)) + min;
+            return Math.floor( Math.random() * (max - min)) + min;
         }
 
-        //var randomNumber = getRandomNumber(40, 700);
 
         function moveButton() {
             if (isMoved) {              
-                var randomX = getRandomNumber(40, 700);
-                var randomY = getRandomNumber(40, 700);
+                let randomX = getRandomNumber(40, window.innerHeight - 30);
+                let randomY = getRandomNumber(40, window.innerWidth - 50);
                 button.style.top = randomX + "px";
                 button.style.left = randomY + "px";
                 isMoved = false;
-                //console.log(randomX, randomY);
+                // console.log(randomX, randomY, window.innerHeight, window.innerWidth);
             } else {
-                var randomX = getRandomNumber(40, 700);
-                var randomY = getRandomNumber(40, 700);
+                let randomX = getRandomNumber(40, window.innerHeight - 30);
+                let randomY = getRandomNumber(40, window.innerWidth - 50);
                 button.style.top = randomX + "px";
                 button.style.left = randomY + "px";
                 isMoved = true;
-                //console.log(randomX, randomY);
+                // console.log(randomX, randomY, window.innerHeight, window.innerWidth);
             }
         }
+
     </script>
 
 </body>

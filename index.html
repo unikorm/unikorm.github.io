@@ -1,90 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>forFun</title>
 
-    <style>
-
-        body {
-            background-color: rgb(62, 187, 222);
-        }
-
-        #myButton {
-            position: absolute;
-            top: 80px;
-            left: 250px;
-            background-color: antiquewhite;
-            color: rgb(255, 127, 174);
-            border-radius: 1em;
-            border: .2em salmon dashed;
-            padding: 1em;
-            font-size: medium;
-            font-weight: bolder;
-        }
-
-        p {
-            color: rgb(107, 67, 145);
-            font-size: medium;
-            font-weight: bolder;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-style: italic;
-            letter-spacing: .2em;
-        }
-
-        p::first-letter {
-            color: rgb(174, 226, 43);
-            font-size: x-large;
-            font-weight: bold;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
     <p>I love my princess...</p>
     <button id="myButton" onclick="moveButton()">Yaiiiii</button>
-
-    <script>
-        let button = document.getElementById("myButton");
-        let isMoved = false;
-
-        function getRandomNumber(min, max) {
-            return Math.floor( Math.random() * (max - min)) + min;
-        }
-
-
-        function moveButton() {
-
-            let randomX, randomY
-
-            if (isMoved) {
-                do {              
-                    randomX = getRandomNumber(40, window.innerHeight);
-                    randomY = getRandomNumber(40, window.innerWidth);
-                    } while (randomX + button.offsetHeight > window.innerHeight || randomY + button.offsetWidth > window.innerWidth)
-
-                button.style.top = randomX + "px";
-                button.style.left = randomY + "px";
-                isMoved = false;
-                // console.log(randomX, randomY, window.innerHeight, window.innerWidth); 
-            } else {
-                do {
-                    randomX = getRandomNumber(40, window.innerHeight);
-                    randomY = getRandomNumber(40, window.innerWidth);
-                    } while (randomX + button.offsetHeight > window.innerHeight || randomY + button.offsetWidth > window.innerWidth)
-
-                button.style.top = randomX + "px";
-                button.style.left = randomY + "px";
-                isMoved = true;
-                // console.log(randomX, randomY, window.innerHeight, window.innerWidth);
-            }
-        }
-
-    </script>
-
 </body>
+
 </html>

@@ -8,12 +8,30 @@
     <title>forFun</title>
 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" defer></script>
 </head>
 
 <body>
     <p>get ready for some serious shit stuff here please my lovers</p>
     <button id="myButton" onclick="moveButton()">Yaiiiii</button>
+    <sectio id="bottomMenu">
+        <button id="btnConverter">converter</button>
+        <button id="btnMemoryGame">memory game</button>
+    </sectio>
+    <article id="convertorMenu">
+        <form id="convertorForm">
+            <label for="inputValue">Input:</label>
+            <input type="text" id="inputValue" required>
+            <label for="techniqueSelect">convert to:</label>
+            <select id="convertingMethod">
+                <option value="binary">to binary</option>
+                <!-- Add more techniques as needed -->
+            </select>
+            <br>
+            <button type="button" onclick="processForm()">DO IT!</button>
+        </form>
+        <div id="output"></div>
+    </article>
 </body>
 
 </html>

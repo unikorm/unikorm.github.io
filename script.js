@@ -1,7 +1,7 @@
 "use strict";
 
 //here will be imported code
-
+import { convert } from "./src/convertor.js"
 
 
 
@@ -19,7 +19,7 @@ const getRandomNumber = (min, max) => {
     return Math.floor( Math.random() * (max - min)) + min;
 };
 
-const moveButton = () => {          // height of buttom 60px, so bottom 125px i want untouched
+export const moveButton = () => {          // height of buttom 60px, so bottom 125px i want untouched
     let randomX, randomY
     if (isMoved) {
         do {              

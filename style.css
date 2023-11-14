@@ -24,10 +24,3 @@ p {
     font-style: italic;
     letter-spacing: .2em;
 }
-
-p::first-letter {
-    color: rgb(174, 226, 43);
-    font-size: x-large;
-    font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}

@@ -3,15 +3,15 @@
 let button = document.getElementById("myButton");
 let isMoved = false;
 
-function getRandomNumber(min, max) {
+const getRandomNumber = (min, max) => {
     return Math.floor( Math.random() * (max - min)) + min;
 };
 
-function moveButton() {
+const moveButton = () => {          // height of buttom 60px, so bottom 125px i want untouched
     let randomX, randomY
     if (isMoved) {
         do {              
-        randomX = getRandomNumber(40, window.innerHeight);
+        randomX = getRandomNumber(40, window.innerHeight - 125);
         randomY = getRandomNumber(40, window.innerWidth);
         }
         while (randomX + button.offsetHeight > window.innerHeight || randomY + button.offsetWidth > window.innerWidth)
@@ -21,7 +21,7 @@ function moveButton() {
         // console.log(randomX, randomY, window.innerHeight, window.innerWidth); 
     } else {
         do {
-        randomX = getRandomNumber(40, window.innerHeight);
+        randomX = getRandomNumber(40, window.innerHeight - 125);
         randomY = getRandomNumber(40, window.innerWidth);
         }
         while (randomX + button.offsetHeight > window.innerHeight || randomY + button.offsetWidth > window.innerWidth)

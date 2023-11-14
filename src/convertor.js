@@ -1,4 +1,4 @@
 
-export const convert = () => {
+export const binary = () => {
     console.log("works!");
 };

@@ -1,7 +1,7 @@
 "use strict";
 
 //here will be imported code
-import { convert } from "./src/convertor.js"
+import { binary } from "./src/convertor.js"
 
 
 
@@ -49,3 +49,7 @@ export const moveButton = () => {          // height of buttom 60px, so bottom 1
 
 
 // handling button on the bottom
+
+export const makeConvert = () => {
+    return binary();
+};

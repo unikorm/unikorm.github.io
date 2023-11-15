@@ -1,4 +1,5 @@
 
+"use strict";
 
 // convertor: decimal to binary and binary to decimal
 const isNumber = (string) => {
@@ -15,8 +16,8 @@ export const binary = (input) => {
 };
 
 export const decimal = (input) => {
-    if (/^[01]+$/.test(input)) {
-        return parseInt(input, 2);
+    if (/^[01]+$/.test(input)) {  // this check if in the string are only 0 and 1
+        return parseInt(input, 2);  // second parameter is radix, it put string in dvajkova sustava, default is 10 (desiatkova standardna sustava)
     } else {
         return "invalid BINARY string";
     };

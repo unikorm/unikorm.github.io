@@ -1,3 +1,4 @@
+
 "use strict";
 
 //here will be imported code
@@ -52,7 +53,12 @@ export const moveButton = () => {          // height of buttom 60px, so bottom 1
 // handling button on the bottom
 
 // here wil be logic of shoving content of what button user clicks 
+const convertorBtn = document.getElementById("btnConverter");
+const convertorMenu = document.getElementById("convertorMenu");
 
+convertorBtn.addEventListener("click", () => {
+    convertorMenu.style.display = (convertorMenu.style.display === "none" || convertorMenu.style.display === "") ? "flex" : "none";  // toggle visibility
+})
 
 
 

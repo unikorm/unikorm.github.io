@@ -2,7 +2,7 @@
 "use strict";
 
 //here will be imported code
-import { binary, decimal } from "./src/convertor.js"
+import { binary, decimal, kelvin, fahrenheit } from "./src/convertor.js"
 
 
 
@@ -50,6 +50,9 @@ export const moveButton = () => {          // height of buttom 60px, so bottom 1
 
 
 
+
+
+
 // handling button on the bottom
 
 // here wil be logic of shoving content of what button user clicks 
@@ -67,7 +70,9 @@ convertorBtn.addEventListener("click", () => {
 
 
 
-// convert between-function, she connect with logic of every convert logic from separate files
+
+
+// convert between-function, she connect with logic of every convert function from separate files
 export const makeConvert = (event) => {
     event.preventDefault();
     
@@ -76,18 +81,18 @@ export const makeConvert = (event) => {
     let convertingMethod = document.getElementById("convertingMethod").value;
     let outputValue = document.getElementById("outputValue");
 
-
-    // chceck what method user want to convert and call appropriate function
-    // if (convertingMethod === "binary") {
-    //     outputValue.innerHTML = binary(inputValue);
-    // };
-
     switch(convertingMethod) {
         case "binary":
             outputValue.innerHTML = binary(inputValue);
             break;
         case "decimal":
             outputValue.innerHTML = decimal(inputValue);
+            break;
+        case "kelvin":
+            outputValue.innerHTML = kelvin(inputValue);
+            break;
+        case "fahrenheit":
+            outputValue.innerHTML = fahrenheit(inputValue);
             break;
         default:
             outputValue.innerHTML = "somethig is wrong"

@@ -1,7 +1,8 @@
 "use strict";
 
 //here will be imported code
-import { binary } from "./src/convertor.js"
+import { binary, decimal } from "./src/convertor.js"
+
 
 
 
@@ -71,7 +72,18 @@ export const makeConvert = (event) => {
 
 
     // chceck what method user want to convert and call appropriate function
-    if (convertingMethod === "binary") {
-        outputValue.innerHTML = binary(inputValue);
-    };
+    // if (convertingMethod === "binary") {
+    //     outputValue.innerHTML = binary(inputValue);
+    // };
+
+    switch(convertingMethod) {
+        case "binary":
+            outputValue.innerHTML = binary(inputValue);
+            break;
+        case "decimal":
+            outputValue.innerHTML = decimal(inputValue);
+            break;
+        default:
+            outputValue.innerHTML = "somethig is wrong"
+    }
 };

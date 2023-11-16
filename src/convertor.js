@@ -34,6 +34,8 @@ export const decimal = (input) => {
 
 
 
+
+
 //  celsius to kelvin and fahrenheit
 // to kelvin
 export const kelvin = (input) => {
@@ -53,4 +55,58 @@ export const fahrenheit = (input) => {
     } else {
         return "write NUMBER!!"
     };
+};
+
+
+
+
+
+
+
+// decimal to roman number and opposite, i find it on web, a lot of variant on it, i find one blog about it so i read it and then i do it
+// to roman
+export const romanize = (input) => {
+
+};
+
+// to deromize
+export const deromanize = (input) => {
+
+};
+
+
+
+
+
+
+
+
+
+
+// color hex to rgb and opposite, interesting too
+// hex to rgb
+export const hexToRgb = (input) => {
+
+};
+
+//rgb to hex
+export const rgbToHex = () => {
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+// text to morse code, the last one i think for now, output will be dots and dashes
+// text to morse code
+export const toMorse = () => {
+
 };

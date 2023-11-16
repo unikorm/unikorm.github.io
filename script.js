@@ -2,7 +2,7 @@
 "use strict";
 
 //here will be imported code
-import { binary, decimal, kelvin, fahrenheit } from "./src/convertor.js"
+import { binary, decimal, kelvin, fahrenheit, romanize, deromanize, hexToRgb, rgbToHex } from "./src/convertor.js"
 
 
 
@@ -94,7 +94,19 @@ export const makeConvert = (event) => {
         case "fahrenheit":
             outputValue.innerHTML = fahrenheit(inputValue);
             break;
+        case "romanize":
+            outputValue.innerHTML = romanize(inputValue);
+            break;
+        case "deromanize":
+            outputValue.innerHTML = deromanize(inputValue);
+            break;
+        case "hexToRgb":
+            outputValue.innerHTML = hexToRgb(inputValue);
+            break;
+        case "rgbToHex":
+            outputValue.innerHTML = rgbToHex(inputValue);
+            break;
         default:
             outputValue.innerHTML = "somethig is wrong"
-    }
+    };
 };

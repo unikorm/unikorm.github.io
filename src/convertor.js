@@ -86,12 +86,19 @@ export const deromanize = (input) => {
 // color hex to rgb and opposite, interesting too
 // hex to rgb
 export const hexToRgb = (input) => {
+    
 
 };
 
 //rgb to hex
-export const rgbToHex = () => {
+const componentToHex = (c) => {   // here we put Int to string in sestnastkovej sustave (hexagonal)
+    let hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;   // it must have two Int in on one value
+};
 
+export const rgbToHex = (input) => {   // here we split the string after commas and then put in Int
+    let decomposition = input.split(",");
+    return "#" + componentToHex(parseInt(decomposition[0])) + componentToHex(parseInt(decomposition[1])) + componentToHex(parseInt(decomposition[2]));
 };
 
 

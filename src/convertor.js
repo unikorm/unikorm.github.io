@@ -41,7 +41,7 @@ export const decimal = (input) => {
 export const kelvin = (input) => {
     if (isNumber(input)) {
         let celsius = parseInt(input);
-        return (celsius + 273.15).toFixed(2);
+        return (celsius + 273.15).toFixed(2);  // fixed to two number after comma
     } else {
         return "write NUMBER!!"
     };
@@ -121,8 +121,58 @@ export const rgbToHex = (input) => {   // here we split the string after commas 
 
 
 
-// text to morse code, the last one i think for now, output will be dots and dashes
-// text to morse code
-export const toMorse = () => {
+// text to morse code and vice versa, the last one i think for now, output will be dots and dashes
+// function to pair character to morse code
+const charToMorse = (char) => {
+    switch (char){
+        case "A": return ".-";
+        case 'B': return '-...';
+        case 'C': return '-.-.';
+        case 'D': return '-..';
+        case 'E': return '.';
+        case 'F': return '..-.';
+        case 'G': return '--.';
+        case 'H': return '....';
+        case 'I': return '..';
+        case 'J': return '.---';
+        case 'K': return '-.-';
+        case 'L': return '.-..';
+        case 'M': return '--';
+        case 'N': return '-.';
+        case 'O': return '---';
+        case 'P': return '.--.';
+        case 'Q': return '--.-';
+        case 'R': return '.-.';
+        case 'S': return '...';
+        case 'T': return '-';
+        case 'U': return '..-';
+        case 'V': return '...-';
+        case 'W': return '.--';
+        case 'X': return '-..-';
+        case 'Y': return '-.--';
+        case 'Z': return '--..';
+        case ' ': return '/';
+        case "1" : return '.----';
+        case "2" : return '..---';
+        case "3" : return '...--';
+        case "4" : return '....-';
+        case "5" : return '.....';
+        case "6" : return '-....';
+        case "7" : return '--...';
+        case "8" : return '---..';
+        case "9" : return '----.';
+        case "0" : return '-----';
+        case "!": return "-.-.--";
+        case "?": return "..--..";
+        case ".": return ".-.-.-";
+        case ",": return "--..--";
+        default: return '';
+    };
+};
 
+// text to morse code
+export const toMorse = (input) => {
+    let modifiedInput = input.toUpperCase().trim();
+    let morseCode = modifiedInput.split("").map(charToMorse).join(" ");
+    return morseCode;
 };

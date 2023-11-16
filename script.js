@@ -2,7 +2,7 @@
 "use strict";
 
 //here will be imported code
-import { binary, decimal, kelvin, fahrenheit, romanize, deromanize, hexToRgb, rgbToHex } from "./src/convertor.js"
+import { binary, decimal, kelvin, fahrenheit, romanize, deromanize, hexToRgb, rgbToHex, toMorse } from "./src/convertor.js"
 
 
 
@@ -105,6 +105,9 @@ export const makeConvert = (event) => {
             break;
         case "rgbToHex":
             outputValue.innerHTML = rgbToHex(inputValue);
+            break;
+        case "toMorse":
+            outputValue.innerHTML = toMorse(inputValue);
             break;
         default:
             outputValue.innerHTML = "somethig is wrong"

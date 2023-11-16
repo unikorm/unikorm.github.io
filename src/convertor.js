@@ -85,8 +85,17 @@ export const deromanize = (input) => {
 
 // color hex to rgb and opposite, interesting too
 // hex to rgb
-export const hexToRgb = (input) => {
-    
+export const hexToRgb = (hex) => {
+    let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);  // regex to find #, then first pair of color, then other two, it return object if all good
+
+    if (result !== null) {
+        let r = parseInt(result[1], 16);
+        let g = parseInt(result[2], 16);
+        let b = parseInt(result[3], 16);
+        return `${r}, ${g}, ${b}`;
+    } else {
+        return "wrong format"
+    }
 
 };
 

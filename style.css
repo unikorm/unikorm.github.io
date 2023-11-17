@@ -1,6 +1,6 @@
 
 body {
-    background-color: rgb(62, 187, 222);
+    background-color: rgb(78, 60, 19);
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,6 +8,8 @@ body {
     justify-content: start;
     align-items: center;
     min-height: 100vh;
+    color: aqua;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #myButton {
@@ -15,7 +17,7 @@ body {
     top: 80px;
     left: 250px;
     background-color: antiquewhite;
-    color: rgb(255, 127, 174);
+    color: rgb(231, 121, 161);
     border-radius: 1em;
     border: .2em salmon dashed;
     padding: 1em;
@@ -24,10 +26,9 @@ body {
 }
 
 p:nth-of-type(1) {
-    color: rgb(107, 67, 145);
+    color: rgb(179, 143, 214);
     font-size: medium;
     font-weight: bolder;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: italic;
     letter-spacing: .2em;
     margin: 1rem 0 0;
@@ -54,4 +55,11 @@ p:nth-of-type(1) {
     justify-content: center;
     position: relative;
     margin-top: 10rem;
+    background: #964444;
+    padding: 1.5rem;
+    border-radius: 20px;
+}
+
+#outputValue {
+    color: bisque;
 }

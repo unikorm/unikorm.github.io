@@ -12,18 +12,21 @@ const isNumber = (string) => {
 // to binary
 export const binary = (input) => {
     if (isNumber(input)) {
-        let startValue = parseInt(input);
-        return (startValue >>> 0).toString(2);  //put the number into binary format, >>> is some crazy JS, google it...
+        console.log(input);
+        let startValue = parseFloat(input);  // this put it with fractional part too
+        console.log(startValue);
+        return startValue.toString(2);  //put the entire number into binary format
     } else {
-        return "write NUMBER!!"
+        return "write NUMBER!!";
     };
 };
 
 
 // to decimal
 export const decimal = (input) => {
-    if (/^[01]+$/.test(input)) {  // this check if in the string are only 0 and 1
-        return (parseInt(input, 2)).toFixed(2);  // second parameter is radix, it put string in dvajkova sustava, default is 10 (desiatkova standardna sustava)
+    let result = input.trim();
+    if (/^[01]+$/.test(result)) {  // this check if in the string are only 0 and 1
+        return (parseInt(result, 2)).toFixed(2);  // second parameter is radix, it put string in dvajkova sustava, default is 10 (desiatkova standardna sustava)
     } else {
         return "invalid BINARY string";
     };
@@ -41,7 +44,7 @@ export const decimal = (input) => {
 export const kelvin = (input) => {
     if (isNumber(input)) {
         let celsius = parseInt(input);
-        return (celsius + 273.15).toFixed(2);  // fixed to two number after comma
+        return (celsius + 273.15).toFixed(2) + " K";  // fixed to two number after comma
     } else {
         return "write NUMBER!!"
     };
@@ -51,7 +54,7 @@ export const kelvin = (input) => {
 export const fahrenheit = (input) => {
     if (isNumber(input)) {
         let celsius = parseInt(input);
-        return (celsius * (9/5) + 32).toFixed(2);
+        return (celsius * (9/5) + 32).toFixed(2) + " F";
     } else {
         return "write NUMBER!!"
     };

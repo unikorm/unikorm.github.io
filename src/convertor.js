@@ -222,6 +222,10 @@ const morseToChar = (morse) => {
 
 // text to morse code
 export const toMorse = (input) => {
+
+    if (/^[ .-]*$/.test(input)) {   // i know i can do better with this to check if it contain any morse code character, but for now only this return when in input will be only morse code characters
+        return "write text, not morse code here";
+    };
     let modifiedInput = input.toUpperCase().trim();  // to upper every letter and delete whitespace on start and the end
     let morseCode = modifiedInput.split("").map(charToMorse).join(" ");  //  first split on every character, then map with chartToMorse and then join with whitespace after every letter
     return morseCode;
@@ -229,6 +233,11 @@ export const toMorse = (input) => {
 
 // morse code to text
 export const toText = (input) => {
-    let textResult = input.split(" ").map(morseToChar);
-    console.log(textResult);
+
+    if (!/^[ /.-]*$/.test(input)) {   // it check if only morse code characters are in input
+        return "here must be only morse code"
+    };
+
+    let textResult = input.trim().split(" ").map(morseToChar);   // put away white spaces at the start and end, split on each character and map over them
+    return textResult.join("");  // join together from array to string
 };
